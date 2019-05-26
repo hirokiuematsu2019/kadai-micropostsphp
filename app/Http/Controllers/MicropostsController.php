@@ -24,9 +24,9 @@ class MicropostsController extends Controller
     {
         $this->validate($request, [
             'content' => 'required|max:191',
-            ])
+            ]);
         $request->user()->microposts()->create([
-            'content'=>$request->content,
+            'content' => $request->content,
             ]);
             return back();
     }
